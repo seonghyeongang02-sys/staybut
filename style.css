@@ -936,3 +936,32 @@ html.dl-has-cur .dl-sec,html.dl-has-cur .dl-sec *{cursor:none}
  .dlh-row .dlh-t{font-size:19px!important}
  .dlh-row.is-lead .dlh-t{font-size:28px!important}
 }
+
+/* ===== 푸터 걷힘 실측 (원본: 785px 동일) ===== */
+.dl-rev{position:relative;z-index:9}
+.dl-rev-in{position:sticky;top:283.75px;height:auto;min-height:0;
+ display:block;overflow:visible}
+.dl-rev-sp{display:block;height:785px;pointer-events:none}
+@media(max-width:1100px){.dl-rev-sp{height:700px}}
+@media(max-width:820px){
+ .dl-rev-in{position:static;top:auto}
+ .dl-rev-sp{display:none}
+}
+
+/* ===== 푸터 실측 (원본: 제호 220px) ===== */
+.dlft-wm,.dlft-wmw,.ft-name{
+ font-family:'Archivo',sans-serif!important;
+ font-size:clamp(44px,15.5vw,220px)!important;
+ letter-spacing:-.03em!important;
+ line-height:.92!important;
+ font-weight:400!important;
+ color:#fff!important;
+ margin:0!important;
+ white-space:nowrap!important}
+.dlft-reach,.dlft-col,.dlft-now{font-size:12px}
+.dlft-cols{grid-template-columns:repeat(3,194.8px);gap:36px 28px}
+@media(max-width:1100px){
+ .dlft-cols{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:820px){
+ .dlft-cols,.ft-g{grid-template-columns:1fr!important;gap:24px!important}
+ .dlft-wm,.dlft-wmw,.ft-name{font-size:clamp(34px,13vw,70px)!important}}
