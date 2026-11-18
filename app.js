@@ -1,3 +1,5 @@
+window.__sb=function(){
+  if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",window.__sb);}
 (function(){
   var F=["3JqKTZR9R9BnmQPX0RoTzxmmt8A","3ccMNwnCqajk3sOcqtApRd63OU","4YJ5PeZHWrkCqJPgOaU82R57QY","7BFhFDHJfuYhBxDlP3mkZuvpgo","7q3IBQuEvdNCqvoZcS43exLdnpE","8OUpItZi2DnYW70mhMpY6qSjGB0","9kROihuf1YZMhALe1v5DF2CHSo","FPdVK4lCcqe2HXfoeZ9IZTt51E","JkNk87SuqUfi5646pHOymkPQA","LyWQDyTmPmSux87dV0CWhmfVXs","Nd5m6XelAjQZh92qlKFinODQtNs","QP6VhMQaWXH0trJuSRbagg97DZs","Tajqu0qAJafZP7EzDPfxZQRHc","UtuhTpzaDzBw6wwSJx6RORLaI","Z9HbUEvMpHiMSh56uJtboV1Uk","byGQMjHHMpZbOVNkdCunM9ZEGL8"];
   var n=0;
@@ -39,3 +41,7 @@
     document.querySelectorAll(".dlsc-panel,.dlsc-p").forEach(function(p){p.classList.toggle("is-on",p.dataset.k===k);});
   });
 })();
+
+};
+if(document.readyState!=="loading"){window.__sb();}else{document.addEventListener("DOMContentLoaded",window.__sb);}
+window.addEventListener("load",window.__sb);
