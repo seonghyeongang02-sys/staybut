@@ -965,3 +965,17 @@ html.dl-has-cur .dl-sec,html.dl-has-cur .dl-sec *{cursor:none}
 @media(max-width:820px){
  .dlft-cols,.ft-g{grid-template-columns:1fr!important;gap:24px!important}
  .dlft-wm,.dlft-wmw,.ft-name{font-size:clamp(34px,13vw,70px)!important}}
+
+/* ===== 푸터 제호 크기 강제 ===== */
+.dlft-wmw,.dlft-wmw .dl-hd-w,.dlft-wmw .dl-hd-i,
+.dlft-wm,.dlft-wm .dl-hd-w,.dlft-wm .dl-hd-i{
+ font-size:clamp(44px,15.5vw,220px)!important;
+ letter-spacing:-.03em!important;
+ line-height:.92!important;
+ font-weight:400!important;
+ color:#fff!important}
+.dlft-wmw,.dlft-wm{white-space:nowrap!important;margin:0!important}
+@media(max-width:820px){
+ .dlft-wmw,.dlft-wmw .dl-hd-w,.dlft-wmw .dl-hd-i,
+ .dlft-wm,.dlft-wm .dl-hd-w,.dlft-wm .dl-hd-i{
+  font-size:clamp(32px,13vw,70px)!important}}
