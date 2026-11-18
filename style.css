@@ -1152,3 +1152,15 @@ html body .dl-rev-in{position:static!important;top:auto!important;
 html body .dl-rev-sp{display:none!important;height:0!important}
 html body .dlft{background:#0e0e10;color:#fff;
  padding:clamp(34px,6vw,70px) 0 26px}
+
+/* ===== 푸터 내용 보이게 (최종) ===== */
+html body .dlft,html body .dlft *{opacity:1!important;visibility:visible!important;
+ translate:0!important;transform:none!important}
+html body .dlft{display:block!important;min-height:auto!important;
+ background:#0e0e10!important;color:#fff!important;
+ padding:clamp(40px,6vw,76px) 0 30px!important}
+html body .dlft-in,html body .dlft .dl-wrap{max-width:1408px;margin:0 auto;
+ padding:0 clamp(20px,4vw,56px)}
+html body .dlft a{color:#fff}
+html body .dlft a:hover{color:#ff674d}
+html body .dl-rev{min-height:0!important;height:auto!important}
