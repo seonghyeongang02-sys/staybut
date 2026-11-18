@@ -922,3 +922,17 @@ html.dl-has-cur .dl-sec,html.dl-has-cur .dl-sec *{cursor:none}
  border-bottom:1.25px solid rgba(20,20,20,.14)}
 .dlla-read li{border-bottom:1.25px solid rgba(20,20,20,.14)}
 .dlla-main{border-top:1.25px solid #141414}
+
+/* ===== 기사 목록 크기·색 실측 (최종) ===== */
+.dlh-row .dlh-t{font-size:28px!important;color:#5d5a53!important;
+ transition:color .35s!important;line-height:1.1!important}
+.dlh-row.is-lead .dlh-t{font-size:48px!important;color:#141414!important}
+.dlh-row.is-on .dlh-t{color:#141414!important}
+@media(max-width:1100px){
+ .dlh-row .dlh-t{font-size:24px!important}
+ .dlh-row.is-lead .dlh-t{font-size:38px!important}
+}
+@media(max-width:820px){
+ .dlh-row .dlh-t{font-size:19px!important}
+ .dlh-row.is-lead .dlh-t{font-size:28px!important}
+}
