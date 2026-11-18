@@ -98,3 +98,17 @@ window.__sb=function(){
                            c.style.transform="translate("+px+"px,"+py+"px)";requestAnimationFrame(loop);})();}}
 };
 if(document.readyState!=="loading"){window.__sb();}else{document.addEventListener("DOMContentLoaded",window.__sb);}
+
+(function(){
+  var deep=(location.pathname.split("/staybut/")[1]||"").indexOf("/")>=0;
+  if(!deep)return;
+  function fix(){
+    document.querySelectorAll("img").forEach(function(im){
+      var s=im.getAttribute("src")||"";
+      if(s.indexOf("images/")===0){im.setAttribute("src","../"+s);}
+    });
+  }
+  fix();
+  setTimeout(fix,200);
+  setTimeout(fix,800);
+})();w
