@@ -1183,3 +1183,8 @@ html body .dl-rev-sp{display:none!important}
 .dl-ld{transition:opacity .4s ease,visibility .4s}
 .dl-ld-b{transition:width .9s cubic-bezier(.3,.9,.2,1)}
 html{scroll-padding-top:72px}
+
+html body .dl-rev{position:relative!important;z-index:1!important;margin-top:0!important;top:auto!important;transform:none!important}
+html body .dlla{margin-bottom:0!important;padding-bottom:clamp(30px,4vw,60px)!important}
+html body>.ssr-variant{position:static!important}
+html body .dl-sec{position:relative!important}
