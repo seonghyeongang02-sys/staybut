@@ -1210,3 +1210,7 @@ html body .dlft{position:relative!important;isolation:isolate}
 .dl-ld.is-on .dl-ld-m{opacity:1;translate:0 0}
 .dl-ld-b{position:absolute;left:0;bottom:0;height:2px;width:0;background:#ff674d;transition:width .9s cubic-bezier(.3,.9,.2,1)}
 .dl-ld.is-on .dl-ld-b{width:100%}
+
+html body .dlsc-panel{display:none!important}
+html body .dlsc-panel.is-on,html body .dlsc-panel[aria-hidden="false"]{display:grid!important}
+html body .dlsc-panels>.dlsc-panel{position:relative!important;opacity:1!important}
