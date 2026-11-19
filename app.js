@@ -249,3 +249,47 @@ setTimeout(function(){
     window.addEventListener("resize",function(){tg=cu=window.scrollY;});
   }
 })();
+
+(function(){
+  if(window.__sbF)return; window.__sbF=1;
+  function clean(){
+    [].slice.call(document.querySelectorAll("iframe")).forEach(function(f){
+      var s=f.getAttribute("src")||"";
+      if(!s||s.indexOf("_files")>=0||s.indexOf("edit")>=0)f.remove();});
+  }
+  function wm(){
+    [].slice.call(document.querySelectorAll(".dlft-wmw,.dlft-wm")).forEach(function(e){
+      e.style.color="#fff";e.style.opacity="1";
+      [].slice.call(e.querySelectorAll("*")).forEach(function(k){
+        k.style.color="#fff";k.style.opacity="1";k.style.translate="0 0";});});
+  }
+  clean();wm();
+  setTimeout(function(){clean();wm();},400);
+  setTimeout(function(){clean();wm();},1500);
+})();
+(function(){
+  if(window.__sbG)return; window.__sbG=1;
+  var RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  var fine=matchMedia("(hover:hover) and (pointer:fine)").matches;
+  var P=[].slice.call(document.querySelectorAll(".dlsc-panel"));
+  var T=[].slice.call(document.querySelectorAll(".dlsc-tab"));
+  function pick(i){
+    P.forEach(function(p,k){var on=(k===i);
+                            p.classList.toggle("is-on",on);
+                            p.setAttribute("aria-hidden",on?"false":"true");});
+    T.forEach(function(t,k){t.classList.toggle("is-on",k===i);});}
+  if(P.length){pick(0);
+               T.forEach(function(t,i){
+                 t.addEventListener("mouseenter",function(){pick(i);});
+                 t.addEventListener("click",function(e){e.preventDefault();pick(i);});});}
+  if(!RM&&fine){
+    var cu=window.scrollY,tg=cu,run=false;
+    function lp(){cu+=(tg-cu)*0.1;
+                  if(Math.abs(tg-cu)<0.4){cu=tg;run=false;}
+                  window.scrollTo(0,cu);if(run)requestAnimationFrame(lp);}
+    window.addEventListener("wheel",function(e){
+      if(e.ctrlKey)return;e.preventDefault();
+      tg=Math.max(0,Math.min(tg+e.deltaY,document.documentElement.scrollHeight-innerHeight));
+      if(!run){run=true;requestAnimationFrame(lp);}},{passive:false});
+    window.addEventListener("resize",function(){tg=cu=window.scrollY;});}
+})();
