@@ -1164,3 +1164,11 @@ html body .dlft-in,html body .dlft .dl-wrap{max-width:1408px;margin:0 auto;
 html body .dlft a{color:#fff}
 html body .dlft a:hover{color:#ff674d}
 html body .dl-rev{min-height:0!important;height:auto!important}
+
+html body .dlft,html body .dlft *{opacity:1!important;visibility:visible!important;translate:0!important}
+html body .dlft{display:block!important;background:#0e0e10!important;color:#fff!important;padding:clamp(40px,6vw,76px) 0 30px!important}
+html body .dlft a{color:#fff}
+html body .dlft a:hover{color:#ff674d}
+html body .dl-rev{min-height:0!important;height:auto!important}
+html body .dl-rev-in{position:static!important;height:auto!important}
+html body .dl-rev-sp{display:none!important}
