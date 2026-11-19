@@ -1241,3 +1241,9 @@ html body .dl-sec{position:static!important;z-index:auto!important}
 html body .dlla{position:static!important;z-index:auto!important;margin-bottom:0!important}
 html body .dl-rev{position:static!important;z-index:auto!important;margin-top:0!important}
 html body .dlft{position:static!important}
+
+html body .dl-cur-label{display:none!important}
+html body .dl-sec,html body .dlla,html body .dlsc,html body .dl-rev,html body .dlft{position:static!important;z-index:auto!important}
+html body .dlla-card h3,html body .dlla-c h3{font-size:30px!important;line-height:1.1!important;letter-spacing:-.02em!important}
+html body .dl-ld-b{display:none!important}
+html body .dl-ld-m{font-size:clamp(22px,3vw,34px)!important;letter-spacing:-.02em!important}
