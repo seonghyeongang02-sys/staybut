@@ -1172,3 +1172,14 @@ html body .dlft a:hover{color:#ff674d}
 html body .dl-rev{min-height:0!important;height:auto!important}
 html body .dl-rev-in{position:static!important;height:auto!important}
 html body .dl-rev-sp{display:none!important}
+
+.dlh-wm{animation-duration:46s!important}
+@media(hover:hover) and (pointer:fine){
+ .dl-cur{display:flex!important;align-items:center;gap:8px}
+ .dl-cur-dot{flex:none}
+ .dl-cur-label{font-family:'Space Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#7b604b;white-space:nowrap;opacity:0;translate:-6px 0;transition:opacity .25s,translate .3s cubic-bezier(.2,.8,.2,1),color .25s}
+ .dl-cur.is-link .dl-cur-label{opacity:1;translate:0 0;color:#ff674d}
+}
+.dl-ld{transition:opacity .4s ease,visibility .4s}
+.dl-ld-b{transition:width .9s cubic-bezier(.3,.9,.2,1)}
+html{scroll-padding-top:72px}
