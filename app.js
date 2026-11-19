@@ -341,3 +341,23 @@ else run();
     wmFix();setTimeout(wmFix,500);setTimeout(wmFix,1500);
   }catch(e){}
 })();
+
+;(function(){
+  try{
+    function ring(){
+      [].slice.call(document.querySelectorAll(".dl-inring")).forEach(function(e){
+        e.classList.remove("dl-inring");
+        e.style.setProperty("color","#fff","important");
+        e.style.setProperty("-webkit-text-fill-color","#fff","important");
+        e.style.setProperty("opacity","1","important");
+      });
+      [].slice.call(document.querySelectorAll(".dlft-wmt,.dlft-wm,.dlft-wmw")).forEach(function(e){
+        e.className=String(e.className).replace(/dl-inring/g,"");
+        e.style.setProperty("color","#fff","important");
+        e.style.setProperty("-webkit-text-fill-color","#fff","important");
+        e.style.setProperty("opacity","1","important");
+      });
+    }
+    ring();setTimeout(ring,400);setTimeout(ring,1200);setTimeout(ring,2500);
+  }catch(e){}
+})();
