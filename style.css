@@ -1236,3 +1236,8 @@ html body .dlsc-panel.is-on{height:auto!important;min-height:0!important}
 html body div.dlla-read,html body .dlla-read{opacity:1!important;visibility:visible!important}
 html body .dlla-read>*{opacity:1!important}
 html body .dlft-wmw .dl-hd-i,html body .dlft-wmw .dl-hd-w{opacity:1!important;translate:0 0!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+
+html body .dl-sec{position:static!important;z-index:auto!important}
+html body .dlla{position:static!important;z-index:auto!important;margin-bottom:0!important}
+html body .dl-rev{position:static!important;z-index:auto!important;margin-top:0!important}
+html body .dlft{position:static!important}
