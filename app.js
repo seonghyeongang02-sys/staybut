@@ -197,3 +197,55 @@ setTimeout(function(){
     cc.appendChild(sp);
   }
 })();
+
+(function(){
+  if(window.__sb4)return; window.__sb4=1;
+  var P=[].slice.call(document.querySelectorAll(".dlsc-panel"));
+  var T=[].slice.call(document.querySelectorAll(".dlsc-tab"));
+  function pick(i){
+    P.forEach(function(p,k){
+      var on=(k===i);
+      p.classList.toggle("is-on",on);
+      p.setAttribute("aria-hidden",on?"false":"true");
+    });
+    T.forEach(function(t,k){t.classList.toggle("is-on",k===i);});
+  }
+  if(P.length)pick(0);
+  T.forEach(function(t,i){
+    t.addEventListener("mouseenter",function(){pick(i);});
+    t.addEventListener("click",function(e){e.preventDefault();pick(i);});
+  });
+})();
+(function(){
+  if(window.__sb5)return; window.__sb5=1;
+  var RM=matchMedia("(prefers-reduced-motion:reduce)").matches;
+  var fine=matchMedia("(hover:hover) and (pointer:fine)").matches;
+  var ld=document.querySelector(".dl-ld");
+  if(!ld){ld=document.createElement("div");ld.className="dl-ld";
+          ld.innerHTML='<span class="dl-ld-m">STAY BUT \u53cb</span><span class="dl-ld-b"></span>';
+          document.body.appendChild(ld);}
+  ld.classList.remove("is-on");
+  if(!RM){
+    document.addEventListener("click",function(e){
+      var a=e.target.closest("a");if(!a)return;
+      var h=a.getAttribute("href")||"";
+      if(!h||h.charAt(0)==="#")return;
+      if(/^(mailto:|tel:)/.test(h))return;
+      if(a.target==="_blank")return;
+      if(a.hostname&&a.hostname!==location.hostname)return;
+      e.preventDefault(); ld.classList.add("is-on");
+      setTimeout(function(){location.href=a.href;},560);
+    });}
+  window.addEventListener("pageshow",function(){ld.classList.remove("is-on");});
+  if(!RM&&fine){
+    var cu=window.scrollY,tg=cu,run=false;
+    function lp(){cu+=(tg-cu)*0.1;
+                  if(Math.abs(tg-cu)<0.4){cu=tg;run=false;}
+                  window.scrollTo(0,cu); if(run)requestAnimationFrame(lp);}
+    window.addEventListener("wheel",function(e){
+      if(e.ctrlKey)return; e.preventDefault();
+      tg=Math.max(0,Math.min(tg+e.deltaY,document.documentElement.scrollHeight-innerHeight));
+      if(!run){run=true;requestAnimationFrame(lp);}},{passive:false});
+    window.addEventListener("resize",function(){tg=cu=window.scrollY;});
+  }
+})();
