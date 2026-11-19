@@ -288,3 +288,26 @@ else run();
     tidy();setTimeout(tidy,500);setTimeout(tidy,1500);
   }catch(e){}
 })();
+
+;(function(){
+  try{
+    var DEEP=/\/(article|section)\//.test(location.pathname);
+    var UP=DEEP?"../":"";
+    function fixLinks(){
+      [].slice.call(document.querySelectorAll("a[href^='#/']")).forEach(function(a){
+        var h=a.getAttribute("href").replace(/^#\//,"");
+        if(!h)return;
+        if(!/\.html$/.test(h)&&!/^https?:/.test(h))h=h+".html";
+        a.setAttribute("href",UP+h);
+      });
+      [].slice.call(document.querySelectorAll(".dlft-wmt,.dlft-wm,.dlft-wmw")).forEach(function(e){
+        e.style.setProperty("color","#fff","important");
+        e.style.setProperty("-webkit-text-fill-color","#fff","important");
+        e.style.setProperty("mix-blend-mode","normal","important");
+        e.style.setProperty("filter","none","important");
+        e.style.setProperty("opacity","1","important");
+      });
+    }
+    fixLinks();setTimeout(fixLinks,500);setTimeout(fixLinks,1600);
+  }catch(e){}
+})();
