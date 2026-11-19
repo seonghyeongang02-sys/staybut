@@ -1196,3 +1196,7 @@ html body [class*=framer-]{min-height:0}
 html body .dlla-card,html body .dlla-c,html body .dlla-grid>*,html body .dlla-read li,html body .dlsc-row,html body .dlsc-r,html body .dlft-col,html body .dlh-wi{opacity:1!important;visibility:visible!important;translate:0!important;transform:none!important;filter:none!important}
 html body .dl-sec,html body .dl-sec *{opacity:1!important}
 html body .dl-hd-i{translate:0 0!important;opacity:1!important}
+
+html body .dlsc-panel[aria-hidden="true"],html body .dlsc-p[aria-hidden="true"],html body .dlsc-pane[aria-hidden="true"]{display:none!important}
+html body .dlsc-panel[aria-hidden="false"],html body .dlsc-p[aria-hidden="false"]{display:grid!important}
+html body .dlsc-panels{position:relative}
