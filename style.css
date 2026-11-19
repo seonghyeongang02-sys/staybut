@@ -1214,3 +1214,6 @@ html body .dlft{position:relative!important;isolation:isolate}
 html body .dlsc-panel{display:none!important}
 html body .dlsc-panel.is-on,html body .dlsc-panel[aria-hidden="false"]{display:grid!important}
 html body .dlsc-panels>.dlsc-panel{position:relative!important;opacity:1!important}
+
+html body .dlft-wmw,html body .dlft-wmw *{color:#fff!important;opacity:1!important;-webkit-text-fill-color:#fff!important;text-shadow:none!important;filter:none!important}
+html body iframe[src*="_files"],html body iframe[src*="edit"]{display:none!important;width:0!important;height:0!important;position:absolute!important;left:-9999px!important}
