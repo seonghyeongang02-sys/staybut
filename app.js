@@ -276,3 +276,15 @@ function run(){
 if(document.readyState==="loading") document.addEventListener("DOMContentLoaded", run);
 else run();
 })();
+
+;(function(){
+  try{
+    function tidy(){
+      var l=document.querySelector(".dl-cur-label");
+      if(l)l.remove();
+      var b=document.querySelector(".dl-ld-b");
+      if(b)b.remove();
+    }
+    tidy();setTimeout(tidy,500);setTimeout(tidy,1500);
+  }catch(e){}
+})();
