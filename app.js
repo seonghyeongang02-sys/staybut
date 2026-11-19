@@ -361,3 +361,19 @@ else run();
     ring();setTimeout(ring,400);setTimeout(ring,1200);setTimeout(ring,2500);
   }catch(e){}
 })();
+
+;(function(){
+  try{
+    function wmReset(){
+      [].slice.call(document.querySelectorAll(".dlft-wmt")).forEach(function(e){
+        e.style.setProperty("opacity","0","important");
+      });
+      [].slice.call(document.querySelectorAll(".dlft-wm")).forEach(function(e){
+        e.style.setProperty("color","#fff","important");
+        e.style.setProperty("-webkit-text-fill-color","#fff","important");
+        e.style.setProperty("opacity","1","important");
+      });
+    }
+    wmReset();setTimeout(wmReset,600);setTimeout(wmReset,1800);setTimeout(wmReset,3000);
+  }catch(e){}
+})();
