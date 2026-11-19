@@ -1247,3 +1247,11 @@ html body .dl-sec,html body .dlla,html body .dlsc,html body .dl-rev,html body .d
 html body .dlla-card h3,html body .dlla-c h3{font-size:30px!important;line-height:1.1!important;letter-spacing:-.02em!important}
 html body .dl-ld-b{display:none!important}
 html body .dl-ld-m{font-size:clamp(22px,3vw,34px)!important;letter-spacing:-.02em!important}
+
+html body .dl-inring{-webkit-text-fill-color:#fff!important;color:#fff!important;opacity:1!important;-webkit-mask:none!important;mask:none!important;clip-path:none!important;background:none!important}
+html body .dlft-body,html body .dlft-cols{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:36px 28px!important}
+html body .dlft-col{min-width:0!important;word-break:normal!important}
+html body .dlft-reach .row,html body .dlft .row{display:flex!important;gap:12px!important;align-items:flex-start!important;flex-wrap:nowrap!important}
+html body .dlft .row>*{min-width:0!important;word-break:normal!important;white-space:normal!important}
+@media(max-width:1000px){html body .dlft-body,html body .dlft-cols{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:700px){html body .dlft-body,html body .dlft-cols{grid-template-columns:1fr!important}}
