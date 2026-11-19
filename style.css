@@ -1188,3 +1188,7 @@ html body .dl-rev{position:relative!important;z-index:1!important;margin-top:0!i
 html body .dlla{margin-bottom:0!important;padding-bottom:clamp(30px,4vw,60px)!important}
 html body>.ssr-variant{position:static!important}
 html body .dl-sec{position:relative!important}
+
+html body .ssr-variant{display:contents!important}
+html body .dl-rev,html body .dl-rev-in,html body .dlft{position:relative!important;top:auto!important;height:auto!important;min-height:0!important;display:block!important;transform:none!important}
+html body [class*=framer-]{min-height:0}
