@@ -1211,3 +1211,24 @@ html body iframe:not([src^="http"]){display:none!important;
 /* 4. 푸터 완전 불투명 */
 html body .dlft,html body .dl-rev,html body .dl-rev-in{
  background:#0e0e10!important;opacity:1!important}
+
+/* ===== 최종 3건 ===== */
+/* 1. Most read 보이게 */
+html body .dlla-read,html body .dlla-side,html body .dlla-read *,
+html body .dlla-main>*{opacity:1!important;visibility:visible!important;
+ translate:0!important;transform:none!important}
+
+/* 2. 푸터 제호 완전 또렷 */
+html body .dlft-wmw,html body .dlft-wmw *,
+html body .dlft-wm,html body .dlft-wm *,
+html body .dlft-wmw .dl-hd-i,html body .dlft-wmw .dl-hd-w{
+ color:#fff!important;opacity:1!important;
+ -webkit-text-fill-color:#fff!important;
+ -webkit-text-stroke:0!important;text-shadow:none!important;
+ filter:none!important;mix-blend-mode:normal!important;
+ translate:0 0!important;transform:none!important}
+
+/* 3. 섹션 패널 안 잘리게 */
+html body .dlsc-panels,html body .dlsc-box,html body .dlsc{
+ overflow:visible!important;max-height:none!important;height:auto!important}
+html body .dlsc-panel.is-on{height:auto!important;min-height:0!important}

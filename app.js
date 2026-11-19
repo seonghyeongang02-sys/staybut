@@ -234,6 +234,20 @@ function transition(){
   window.addEventListener("pageshow",function(){ ld.classList.remove("is-on"); });
 }
 
+
+/* ---------- 최종 보정 ---------- */
+function finalFix(){
+  [].slice.call(document.querySelectorAll(".dlla-read,.dlla-side,.dlla-main>*"))
+    .forEach(function(e){ e.style.opacity="1"; e.style.visibility="visible";
+      e.style.translate="0"; e.classList.add("is-on","is-in"); });
+  [].slice.call(document.querySelectorAll(".dlft-wmw,.dlft-wm")).forEach(function(e){
+    e.style.color="#fff"; e.style.opacity="1"; e.style.webkitTextFillColor="#fff";
+    [].slice.call(e.querySelectorAll("*")).forEach(function(k){
+      k.style.color="#fff"; k.style.opacity="1";
+      k.style.webkitTextFillColor="#fff"; k.style.translate="0 0"; });
+  });
+}
+
 /* ---------- 실행 ---------- */
 function run(){
   try{ clean(); }catch(e){}
@@ -254,8 +268,9 @@ function run(){
   try{ smooth(); }catch(e){}
   try{ cursor(); }catch(e){}
   try{ transition(); }catch(e){}
-  setTimeout(function(){ try{ clean(); fixImages(); reveal(); }catch(e){} }, 600);
-  setTimeout(function(){ try{ clean(); fixImages(); reveal(); }catch(e){} }, 1800);
+  try{ finalFix(); }catch(e){}
+  setTimeout(function(){ try{ clean(); fixImages(); reveal(); finalFix(); }catch(e){} }, 600);
+  setTimeout(function(){ try{ clean(); fixImages(); reveal(); finalFix(); }catch(e){} }, 1800);
 }
 
 if(document.readyState==="loading") document.addEventListener("DOMContentLoaded", run);
