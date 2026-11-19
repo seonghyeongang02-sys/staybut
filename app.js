@@ -162,3 +162,10 @@ if(document.readyState!=="loading"){window.__sb();}else{document.addEventListene
   paintSec();
   document.addEventListener("click",function(e){if(e.target.closest("[data-k]"))setTimeout(paintSec,60);});
 })();
+
+setTimeout(function(){
+  var H=["8OUpItZi2DnYW70mhMpY6qSjGB0","uFvbyTyskFaox3aJ02Vu1zJGn6w","7q3IBQuEvdNCqvoZcS43exLdnpE","Nd5m6XelAjQZh92qlKFinODQtNs","Z9HbUEvMpHiMSh56uJtboV1Uk"];
+  var PP=/\/(article|section)\//.test(location.pathname)?"../":"";
+  [].slice.call(document.querySelectorAll(".dlh-img")).forEach(function(e,i){e.setAttribute("src",PP+"images/"+H[i%H.length]+".jpg");});
+  [].slice.call(document.querySelectorAll(".dlh-tb")).forEach(function(b,i){var m=b.querySelector("img");if(m)m.setAttribute("src",PP+"images/"+H[i%H.length]+".jpg");});
+},900);
