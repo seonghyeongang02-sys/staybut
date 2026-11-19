@@ -1192,3 +1192,7 @@ html body .dl-sec{position:relative!important}
 html body .ssr-variant{display:contents!important}
 html body .dl-rev,html body .dl-rev-in,html body .dlft{position:relative!important;top:auto!important;height:auto!important;min-height:0!important;display:block!important;transform:none!important}
 html body [class*=framer-]{min-height:0}
+
+html body .dlla-card,html body .dlla-c,html body .dlla-grid>*,html body .dlla-read li,html body .dlsc-row,html body .dlsc-r,html body .dlft-col,html body .dlh-wi{opacity:1!important;visibility:visible!important;translate:0!important;transform:none!important;filter:none!important}
+html body .dl-sec,html body .dl-sec *{opacity:1!important}
+html body .dl-hd-i{translate:0 0!important;opacity:1!important}
